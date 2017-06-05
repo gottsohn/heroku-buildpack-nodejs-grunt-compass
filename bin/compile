@@ -54,10 +54,6 @@ PATH=$PATH:$build_dir/vendor/node/bin
 
 # Run subsequent node/npm commands from the build path
 cd $build_dir
-
-echo "Running npm install to install deps"
-npm install
-
 is_gruntfile_present= [ -f $build_dir/grunt.js ] || [ -f $build_dir/Gruntfile.js ] || [ -f $build_dir/Gruntfile.coffee ];
 if $is_gruntfile_present; then
   status "Found Gruntfile"
